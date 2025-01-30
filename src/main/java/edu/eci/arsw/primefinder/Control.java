@@ -10,7 +10,7 @@ package edu.eci.arsw.primefinder;
  */
 public class Control extends Thread {
     
-    private final static int NTHREADS = 3;
+    private final static int NTHREADS = 1;
     private final static int MAXVALUE = 30000000;
     private final static int TMILISECONDS = 5000;
 
