@@ -27,6 +27,7 @@ public class Board extends JLabel implements Observer {
   static int[] result = new int[SnakeApp.MAX_THREADS];
   Random random = new Random();
   static Cell[][] gameboard = new Cell[GridSize.GRID_WIDTH][GridSize.GRID_HEIGHT];
+  private Image light;
 
   @SuppressWarnings("unused")
   public Board() {
@@ -130,15 +131,21 @@ public class Board extends JLabel implements Observer {
     drawTurboBoosts(g);
   }
 
-  private void drawTurboBoosts(Graphics g) {
-    Image light = null;
+  public void loadImage() {
     InputStream resource = ClassLoader.getSystemResourceAsStream(
       "Img/lightning.png"
     );
     try {
       light = ImageIO.read(resource);
     } catch (IOException e) {
-      e.printStackTrace();
+      e.printStackTrace(); // Podrías agregar un mensaje más informativo aquí
+    }
+  }
+
+  private void drawTurboBoosts(Graphics g) {
+    if (light == null) {
+      System.out.println("Imagen no cargada correctamente.");
+      return; // No intentar dibujar si la imagen no está cargada
     }
     for (Cell c : turbo_boosts) {
       g.drawImage(
