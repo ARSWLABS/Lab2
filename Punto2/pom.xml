@@ -10,15 +10,24 @@
     <url>http://maven.apache.org</url>
 
     <build>
-        <sourceDirectory>src/main/java</sourceDirectory> <!-- Correcto, no hace falta cambiar esto -->
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include> <!-- Incluye todos los archivos de la carpeta resources -->
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>1.8</source> <!-- Java versión de código fuente -->
-                    <target>1.8</target> <!-- Versión de destino de bytecode -->
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -26,15 +35,13 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <!-- Asegúrate de que el nombre del paquete y clase principal sea correcto -->
-                    <mainClass>snakepackage.SnakeApp</mainClass> <!-- Cambiar si tu clase principal tiene otro nombre o ubicación -->
+                    <mainClass>snakepackage.SnakeApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <!-- Dependencia de JUnit 5, si estás utilizando JUnit 5 para las pruebas -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

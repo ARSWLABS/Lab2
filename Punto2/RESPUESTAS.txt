@@ -1,25 +1,22 @@
 Ejercicio
 
-1. Analice el código para entender cómo hace uso de hilos para crear un comportamiento autónomo de las N serpientes.
+Posibles condiciones de carrera:
+1. Acceso concurrente a `gameboard` en `Board` y `Snake`.
+2. Acceso concurrente a `snakeBody` en `Snake`.
 
-2.De acuerdo con lo anterior, y con la lógica del juego, identifique y escriba claramente (archivo RESPUESTAS.txt):
+Uso inadecuado de colecciones:
+1. Uso de `LinkedList` en `Snake` sin sincronización.
 
-        Posibles condiciones de carrera.
-            1. Acceso concurrente a gameboard en Board y Snake: Las serpientes acceden y modifican el estado de las celdas en el tablero de juego (gameboard), lo que puede causar condiciones de carrera.
-            2. Acceso concurrente a snakeBody en Snake: La lista snakeBody es modificada y leída por múltiples hilos sin sincronización.
+Uso innecesario de esperas activas:
+1. Bucle `while (true)` en `SnakeApp`.
 
-        Uso inadecuado de colecciones, considerando su manejo concurrente (para esto, aumente la velocidad del juego y ejecútelo varias veces hasta que se genere un error).
-            1.Uso de LinkedList en Snake sin sincronización: La lista snakeBody es accedida y modificada por múltiples hilos sin sincronización.
-        
-        Uso innecesario de esperas activas.
-            1.Bucle while (true) en SnakeApp: El bucle principal en SnakeApp utiliza una espera activa para verificar el estado de las serpientes.
+Soluciones realizadas:
+1. Sincronización de `gameboard` en `Board` y `Snake` utilizando métodos sincronizados.
 
-3.Identifique las regiones críticas asociadas a las condiciones de carrera, y haga algo para eliminarlas. Tenga en cuenta que se debe sincronizar estríctamente LO NECESARIO. En su documento de respuestas indique, la solución realizada para cada ítem del punto 2. Igualmente tenga en cuenta que en los siguientes puntos NO se deben agregar más posibles condiciones de carrera.
+2. Sincronización de `snakeBody` en `Snake` utilizando bloques sincronizados.
 
-4.Como se puede observar, el juego está incompleto. Haga los ajustes necesarios para que a través de botones en la interfaz se pueda Iniciar/Pausar/Reanudar el juego: iniciar el juego no se ha iniciado aún, suspender el juego si está en ejecución, reactivar el juego si está suspendido. Para esto tenga en cuenta:
+3. Reemplazo de espera activa en `SnakeApp` utilizando `wait` y `notify`.
 
-Al pausar (suspender) el juego, en alguna parte de la interfaz (agregue los componentes que desee) se debe mostrar:
-
-La serpiente viva más larga.
-La peor serpiente: la que primero murió.
-Recuerde que la suspensión de las serpientes NO es instantánea, y que se debe garantizar que se muestre información consistente.
+Implementación de la funcionalidad de iniciar, pausar y reanudar el juego:
+1. Agregar botones de control en la interfaz.
+2. Mostrar información de la serpiente más larga y la peor serpiente al pausar el juego.

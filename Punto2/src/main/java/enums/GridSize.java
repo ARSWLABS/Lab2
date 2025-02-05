@@ -1,4 +1,4 @@
-package java.enums;
+package enums;
 
 public class GridSize {
 
