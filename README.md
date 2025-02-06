@@ -1,5 +1,14 @@
-# PUNTO2
-# Snake Game - Proyecto Arreglado
+# Laboratiro 2
+## Integrantes: Juan Cancelado y Diego Chicuazuque
+## PUNTO 1
+En este punto nos pedian que usaramos el notify, notifyAll y el wait para que los hilos pararan y se despertaran.
+el codigo que nos proporciona el repositorio lo que hace es calcular todos los numeros primos hasta un numero n.
+
+lo que nosotros hicimos es que calculara cuantos numeros primos habian calculado en el tiempo t el cual esta en milisegundos, lo que nosotros hicimos es usar el wait para parar la ejecucion de todos los hilos y nos mostrara en pantalla el numero de primos que llevaba, luego lo que hicimos los despertabamos con un notifyAll para que todo siguieran calculando y se paraba cada t milisegundos.
+
+
+## PUNTO2
+## Snake Game - Proyecto Arreglado
 
 Este proyecto es un juego de la serpiente implementado en Java con hilos para gestionar múltiples serpientes de forma autónoma. El juego incluye un tablero de juego compartido entre las serpientes, con acceso concurrente y una interfaz gráfica. La lógica fue ajustada y corregida para mejorar el rendimiento y solucionar errores relacionados con condiciones de carrera y manejo de hilos.
 
