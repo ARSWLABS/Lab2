@@ -1,0 +1,22 @@
+Ejercicio
+
+Posibles condiciones de carrera:
+1. Acceso concurrente a `gameboard` en `Board` y `Snake`.
+2. Acceso concurrente a `snakeBody` en `Snake`.
+
+Uso inadecuado de colecciones:
+1. Uso de `LinkedList` en `Snake` sin sincronización.
+
+Uso innecesario de esperas activas:
+1. Bucle `while (true)` en `SnakeApp`.
+
+Soluciones realizadas:
+1. Sincronización de `gameboard` en `Board` y `Snake` utilizando métodos sincronizados.
+
+2. Sincronización de `snakeBody` en `Snake` utilizando bloques sincronizados.
+
+3. Reemplazo de espera activa en `SnakeApp` utilizando `wait` y `notify`.
+
+Implementación de la funcionalidad de iniciar, pausar y reanudar el juego:
+1. Agregar botones de control en la interfaz.
+2. Mostrar información de la serpiente más larga y la peor serpiente al pausar el juego.

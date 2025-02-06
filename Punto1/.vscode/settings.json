@@ -1,0 +1,7 @@
+{
+<<<<<<< Updated upstream
+    "java.debug.settings.onBuildFailureProceed": true
+=======
+    "java.configuration.updateBuildConfiguration": "interactive"
+>>>>>>> Stashed changes
+}
