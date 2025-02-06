@@ -28,6 +28,10 @@ lo que nosotros hicimos es que calculara cuantos numeros primos habian calculado
    mvn exec:java
    ```
 
+### 🚀 **Conclusión**
+
+Este punto del laboratorio nos ayudo a conocer como funcionaban los hilos en la programacion y como parar un hilo o como despertarlo, tambien fue un desafio para nosotros ya que no fue tan facil pero al final logramos entender y conocer un poco mas de las funcionalidades que tiene un hilo y como funciona dentro de nuestro computador.
+
 ## PUNTO2
 ## Snake Game - Proyecto Arreglado
 
