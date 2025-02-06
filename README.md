@@ -26,7 +26,7 @@ Todo esto esta explicado mas en detalle en el RESPUESTAS.txt que encuentras en
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/snake-game.git
+   git clone https://github.com/ARSWLABS/Lab2.git
    ```
 
 2. Navega al directorio del proyecto:
