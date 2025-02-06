@@ -6,6 +6,27 @@ el codigo que nos proporciona el repositorio lo que hace es calcular todos los n
 
 lo que nosotros hicimos es que calculara cuantos numeros primos habian calculado en el tiempo t el cual esta en milisegundos, lo que nosotros hicimos es usar el wait para parar la ejecucion de todos los hilos y nos mostrara en pantalla el numero de primos que llevaba, luego lo que hicimos los despertabamos con un notifyAll para que todo siguieran calculando y se paraba cada t milisegundos.
 
+## Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/ARSWLABS/Lab2.git
+   ```
+
+2. Navega al directorio del proyecto:
+   ```bash
+   cd Punto1
+   ```
+
+3. Compila el proyecto:
+   ```bash
+   mvn clean package
+   ```
+
+4. Ejecuta el juego:
+   ```bash
+   mvn exec:java
+   ```
 
 ## PUNTO2
 ## Snake Game - Proyecto Arreglado
